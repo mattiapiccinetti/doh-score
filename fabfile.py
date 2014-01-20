@@ -6,9 +6,11 @@ env.use_ssh_config=True
 env.hosts = ['medmed']
 gunicorn_pid = 'gunicorn_pid'
 port=8001
+appenv='appenv'
+
 
 def activate():
-    return 'cd {appenv} && source bin/activate'
+    return 'cd {0} && source bin/activate'.format(appenv)
 
 @task
 def start():
