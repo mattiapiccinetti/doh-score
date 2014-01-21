@@ -27,9 +27,9 @@
 
 
   - name: #builderusers | The user "mattiapiccinetti" exists
-    user: name=mattiapiccinetti state=present shell=/bin/bash
+    user: name=mattia state=present shell=/bin/bash
     tags: builderusers
   
   - name: #builderusers | mattiapiccinetti's ssh public key is authorized to connect
-    authorized_key: user=mattiapiccinetti key="{{ lookup('file', 'keys/mattiapiccinetti_rsa.pub') }}"
+    authorized_key: user=mattia key="{{ lookup('file', 'keys/mattiapiccinetti_rsa.pub') }}"
     tags: builderusers
